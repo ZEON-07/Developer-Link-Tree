@@ -14,3 +14,20 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
+
+.link-btn {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  background-color: #0070f3;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-btn:hover,
+.link-btn:focus-visible {
+  background-color: #0051a2;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
