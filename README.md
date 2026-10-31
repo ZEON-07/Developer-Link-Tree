@@ -29,6 +29,12 @@ Open `index.html` in your browser by:
 - Double-clicking `index.html` from your file manager, **or**
 - Using a local development extension like VS Code's **Live Server**.
 
+## ✨ Personalize Your Link Tree
+
+Use the **Edit your profile** form to update your display name, username, bio, profile picture, and GitHub and LinkedIn profile URLs. Profile pictures can be uploaded (up to 2 MB). Social profile links are optional and must use an `http://` or `https://` URL.
+
+Select **Save profile** to store your changes in this browser's local storage. After saving, choose **See your saved profile** to open the standalone output page at `profile.html`. If no profile has been saved yet, that page explains how to get started instead of showing the default profile. The profile remains available after refreshing in this browser and on this device.
+
 ---
 
 ## 🛠️ Workshop Issues & Challenges

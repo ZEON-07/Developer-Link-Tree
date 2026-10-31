@@ -3,27 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111827">
   <title>Developer Link Tree</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
   <main id="main-container" class="container">
-    <header class="profile-header">
-      <img
-        src="https://api.dicebear.com/7.x/bottts/svg?seed=developer"
-        alt="Profile Avatar"
-        class="profile-img"
-        width="120"
-        height="120"
-      >
-      <h1 class="profile-name">Alex Dev</h1>
-      <p class="profile-bio">Full Stack Developer & Open Source Enthusiast</p>
-    </header>
+    <section class="editor-card" aria-labelledby="editor-heading">
+      <div class="editor-heading">
+        <p class="eyebrow">Make it yours</p>
+        <h2 id="editor-heading">Edit your profile</h2>
+        <p>Personalize how you show up on your link tree.</p>
+      </div>
 
-    <section class="links-section">
-      <a href="https://github.com" class="link-btn" target="_blank" rel="noopener noreferrer">
-        GitHub Profile
-      </a>
+      <form id="profile-form">
+        <label for="display-name">Display name</label>
+        <input
+          type="text"
+          id="display-name"
+          name="displayName"
+          maxlength="60"
+          autocomplete="name"
+          required
+        >
+
+        <label for="username">Username</label>
+        <div class="username-input">
+          <span aria-hidden="true">@</span>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            maxlength="30"
+            pattern="[A-Za-z0-9._\-]*"
+            autocomplete="username"
+            aria-describedby="username-help"
+          >
+        </div>
+        <p class="field-help" id="username-help">Letters, numbers, dots, underscores, and hyphens.</p>
+
+        <label for="bio">Bio</label>
+        <textarea id="bio" name="bio" rows="3" maxlength="160"></textarea>
+        <p class="field-help">Up to 160 characters.</p>
+
+        <label for="picture-file">Profile picture</label>
+        <input
+          type="file"
+          id="picture-file"
+          name="pictureFile"
+          accept="image/*"
+          aria-describedby="picture-help"
+        >
+        <p class="field-help" id="picture-help">Upload an image up to 2 MB.</p>
+
+        <label for="github-url">GitHub profile URL</label>
+        <input
+          type="url"
+          id="github-url"
+          name="githubUrl"
+          placeholder="https://github.com/your-username"
+          inputmode="url"
+          autocomplete="url"
+        >
+
+        <label for="linkedin-url">LinkedIn profile URL</label>
+        <input
+          type="url"
+          id="linkedin-url"
+          name="linkedinUrl"
+          placeholder="https://www.linkedin.com/in/your-username"
+          inputmode="url"
+          autocomplete="url"
+        >
+
+        <button class="save-btn" type="submit">Save profile</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        <a class="view-profile-link" id="view-profile-link" href="profile.html" hidden>See your saved profile</a>
+      </form>
     </section>
   </main>
 </body>
